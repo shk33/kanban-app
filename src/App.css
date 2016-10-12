@@ -69,6 +69,11 @@ ul {
   border-bottom: solid 5px transparent;
 }
 
+.card__title:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
 .card__title:before {
   display: inline-block;
   width: 1em;
