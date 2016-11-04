@@ -14,7 +14,7 @@ let cardsList = [
   {
     id: 2,
     title: "Write some code",
-    description: "Code along with the samples in the book at [github] (https://github.com/pro-react)",
+    description: "Code along with the samples in the book at [github](https://github.com/pro-react)",
     status: "todo",
     tasks: [
     {
