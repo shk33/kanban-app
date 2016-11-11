@@ -61,7 +61,7 @@ class Card extends Component {
 
 Card.propTypes = {
   id: PropTypes.number,
-  title: PropTypes.string,
+  title: titlePropType,
   description: PropTypes.string,
   color: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object)
