@@ -10,6 +10,8 @@
     "webpack-dev-server": "^1.10.*"
   },
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "immutability-helper": "^2.0.0",
     "marked": "^0.3.6",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

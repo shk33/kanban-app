@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import KanbanBoardContainer from './KanbanBoardContainer';
+import 'babel-polyfill';
 
 import './App.css';
 
