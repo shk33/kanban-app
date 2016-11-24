@@ -35,7 +35,7 @@ class KanbanBoardContainer extends Component {
     // Old State
     let prevState = this.state;
     // Find the index of the card
-    let cardIndex = this.state.cards.findIndex((card)=>card.id == cardId);
+    let cardIndex = this.state.cards.findIndex((card)=>card.id === cardId);
     // Create a new task with the given name and a temporary ID
     let newTask = {id:Date.now(), name:taskName, done:false};
     // Create a new object and push the new task to the array of tasks
@@ -47,7 +47,6 @@ class KanbanBoardContainer extends Component {
 
     // set the component state to the mutated object
     this.setState({cards:nextState});
-
     // Call the API to add the task on the server
     fetch(`${API_URL}/cards/${cardId}/tasks`, {
       method: 'post',
@@ -56,7 +55,7 @@ class KanbanBoardContainer extends Component {
     })
     .then((response) => {
       if (response.ok) {
-        response.json() ;
+        return response.json();
       } else {
         throw new Error("Server response wasn't OK");
       }
@@ -78,7 +77,7 @@ class KanbanBoardContainer extends Component {
     // Find the index of the card
     let cardIndex = this.state.cards.findIndex((card)=> card.id === cardId);
     // Create a new object without the task
-    let nextState = React.addons.update(this.state.cards, {
+    let nextState = update(this.state.cards, {
       [cardIndex]: {
         tasks: {$splice: [[taskIndex,1]] }
       }
